@@ -1,0 +1,178 @@
+@font-face {
+    font-family: new;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+* {
+margin: 0;
+padding: 0;
+font-family: new;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+width: 100%;
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    padding: 2vw 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid rgba(163, 159, 159, 0.674);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgb(37, 37, 37);
+    letter-spacing: -0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+.nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-part2 h4 a{
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    z-index: 9;
+    position: relative;
+}
+
+.nav-part2 h4:hover a{
+    color: #fff;
+}
+
+.center{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* background-color: orangered; */
+    border-bottom: 1px solid rgb(105, 103, 103);
+    padding-bottom: 4vw;
+}
+
+.left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 1.9vw;
+    letter-spacing: -0.5px;
+}
+
+.center h1 {
+    font-size: 10vw;
+    line-height: 8.3vw;
+    text-align: right;
+}
+
+.page1 video {
+    border-radius: 30px;
+    margin-top: 4.5vw;
+    width: 100%;
+    position: relative;
+}
+
+.hero-shape {
+    width: 46vw;
+    height: 36vw;
+    position: absolute;
+    right: 0;
+    top: 78vh;
+    /* filter: blur(20px); */
+}
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #FC4620;
+    border-top-left-radius: 50%;
+    filter: blur(10px);
+    border-bottom-left-radius: 50%;
+    position: absolute;
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background-image: linear-gradient(#FC4620, #fe570a);
+    border-radius: 50%;
+    /* background-color: orangered; */
+    filter: blur(25px);
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background-image: linear-gradient(#FC4620, #fe570a);
+    border-radius: 50%;
+    /* background-color: orangered; */
+    filter: blur(25px);
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(85%,-15%);
+    }
+    to{
+        transform: translate(-10%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(0%,30%);
+    }
+}

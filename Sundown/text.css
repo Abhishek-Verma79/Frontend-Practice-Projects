@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+margin: 0;
+padding: 0;
+font-family: montserrat;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+width: 100%;
+}
+
+body{
+    padding : 100px;
+}
+
+#hero1{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    /* filter: blur(20px); */
+    background-color: orangered;
+    position: absolute;
+}
+
+#hero2{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    /* filter: blur(20px); */
+    background-color: blue;
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime {
+    from{
+        transform: translate(-10%, -10%);
+    }
+    to{
+        transform: translate(10%,10%);
+    }
+}
